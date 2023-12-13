@@ -1,9 +1,10 @@
 #!name=芒果Tv解锁全部会员
 #!desc=解锁所有画质 页面广告待优化
 
-
+[Script]
+# 解锁会员
 mgtv1 = type=http-response, pattern=^https:\/\/mobile\.api\.mgtv.com\/v\d+\/video\/getSource\?_support=.+  requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/Fromboy/conf/MGTV/mgtv0.js
 mgtv2 = type=http-response, pattern=^https:\/\/mobile\.api\.mgtv.com\/v\d+\/video\/getSource\?_support=.+ requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/Fromboy/conf/MGTV/mgtv1.js
 mgtv = type=http-request, pattern=^https:\/\/nuc2\.api\.mgtv\.com\/GetUserInfo.+  requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/Fromboy/conf/MGTV/mgtv2.js, timeout=60, script-update-interval=0
-
+[MITM]
 hostname = %APPEND% *.mgtv.com

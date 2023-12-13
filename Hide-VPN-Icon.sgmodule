@@ -1,0 +1,7 @@
+#!name=Hide VPN Icon
+#!desc=隐藏VPN图标
+#!system=ios
+#!date=2023-12-13
+
+[General]
+hide-vpn-icon = true

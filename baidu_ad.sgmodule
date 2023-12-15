@@ -1,0 +1,16 @@
+[Rule]
+
+DOMAIN-SUFFIX,eclick.baidu.com,Reject
+DOMAIN-SUFFIX,entry.baidu.com,Reject
+DOMAIN-SUFFIX,hmma.baidu.com,Reject
+DOMAIN-SUFFIX,mobads-logs.baidu.com,Reject
+DOMAIN-SUFFIX,mobads.baidu.com,Reject
+DOMAIN-SUFFIX,mtj.baidu.com,Reject
+DOMAIN-SUFFIX,nsclick.baidu.com,Reject
+DOMAIN-SUFFIX,static.tieba.baidu.com,Reject
+DOMAIN-SUFFIX,ucstat.baidu.com,Reject
+DOMAIN-SUFFIX,union.baidu.com,Reject
+DOMAIN-SUFFIX,imageplus.baidu.com,Reject
+DOMAIN-SUFFIX,t10.baidu.com,Reject
+DOMAIN-SUFFIX,t11.baidu.com,Reject
+DOMAIN-SUFFIX,t12.baidu.com,Reject

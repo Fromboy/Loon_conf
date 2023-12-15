@@ -1,3 +1,7 @@
+#!name=百度系去广告
+#!desc=百度域名去广告规则
+#!date=2023-12-15
+#和计数量14个
 [Rule]
 
 DOMAIN-SUFFIX,eclick.baidu.com,Reject

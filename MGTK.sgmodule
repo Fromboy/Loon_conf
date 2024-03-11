@@ -1,0 +1,15 @@
+#!name=芒果Tv解锁全部会员
+#!desc=解锁所有画质 页面广告待优化
+
+[Script]
+# 解锁会员
+
+[Script]
+
+mgtk = type=http-response,pattern=^https?:\/\/.*mgtv.com.*(GetUserInfo|module\/list\?_support|app\/bdboot|pullReleaseInfo|floor\/detail|video\/source|entry\?_support).*$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/WeiGiegie/666/main/mgtv.js
+
+mgtk = type=http-request,pattern=^https?:\/\/mobile-stream\.api\.mgtv\.com\/v1\/video\/source\?,requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/WeiGiegie/666/main/mgtk.js
+
+[MITM]
+hostname= %APPEND% *mgtv.com
+

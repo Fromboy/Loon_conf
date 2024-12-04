@@ -1,4 +1,5 @@
 #!url= https://raw.githubusercontent.com/Fromboy/Loon_conf/refs/heads/main/SteveWatch-XPTV-Direct.list
+#!url= https://raw.githubusercontent.com/fangkuia/XPTV/main/X/xptv.plugin
 #!name= SteveWatch-XPTV-Direct规则
 #!desc=仅直连
 [Rule]

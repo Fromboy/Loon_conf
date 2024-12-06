@@ -1,0 +1,7 @@
+
+# 2024-12-06 23:55
+# Telegram  服务中心
+# 防止TG加载转圈
+# 请把这个规则设置为拒绝
+
+IP-CIDR,95.161.76.100/31,REJECT-NO-DROP,no-resolve

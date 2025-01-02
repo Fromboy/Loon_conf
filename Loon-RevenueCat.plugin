@@ -1,5 +1,9 @@
-#!name= Revenuecat
-#!desc= 解锁Revenuecat订阅
+#!name= 解锁 Revenuecat 订阅
+#!icon=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/App_Store.png
+#!desc= 解锁 Revenuecat 订阅
+#!desc= 更新日期 2025-01-02
+#!homepage= 
+
 
 [Rewrite]
 ^https:\/\/(api\.revenuecat\.com|api\.rc-backup\.com)\/.+\/(receipts$|subscribers\/[^/]+$) https://rc-backup.lovebabyforever.workers.dev header

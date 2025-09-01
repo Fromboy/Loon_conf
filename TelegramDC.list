@@ -1,6 +1,9 @@
 # 2024-04-29 23:55
 # Telegram DC ASN 欧盟 🇪🇺 服务中心
 # 电报处理中心
+# 欧盟 🇪🇺 https://raw.githubusercontent.com/Fromboy/Loon_conf/refs/heads/main/TelegramDC.list
+# 新加坡 🇸🇬 https://raw.githubusercontent.com/Fromboy/Loon_conf/refs/heads/main/TelegramSG.list
+# 美国 🇺🇸 https://raw.githubusercontent.com/Fromboy/Loon_conf/refs/heads/main/TelegramUS.list
 
 IP-ASN, 62041, 欧盟节点
 IP-ASN, 44907, 欧盟节点

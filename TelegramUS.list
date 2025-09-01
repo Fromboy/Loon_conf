@@ -1,5 +1,9 @@
 # 2024-04-29 23:55
 # Telegram US ASN 美国 🇺🇸 服务中心
+# 欧盟 🇪🇺 https://raw.githubusercontent.com/Fromboy/Loon_conf/refs/heads/main/TelegramDC.list
+# 新加坡 🇸🇬 https://raw.githubusercontent.com/Fromboy/Loon_conf/refs/heads/main/TelegramSG.list
+# 美国 🇺🇸 https://raw.githubusercontent.com/Fromboy/Loon_conf/refs/heads/main/TelegramUS.list
+
 
 IP-ASN, 59930, 美国节点
 IP-ASN, 211157, 美国节点

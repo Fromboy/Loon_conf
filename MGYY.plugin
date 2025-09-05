@@ -2,6 +2,7 @@
 #!desc=解锁咪咕音乐VIP、音质 + 去广告
 #!icon=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Music.png
 
+
 [Rewrite]
 # 去广告
 ^https://app\.c\.nf\.migu\.cn/strategy/listen-url/v2.5 url 302 https://app.c.nf.migu.cn/strategy/listen-url/v2.4

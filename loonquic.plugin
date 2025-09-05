@@ -1,4 +1,5 @@
 #!name=Quic规则和屏蔽443端口
+#!请注意QUIC(IP+域名和QUIC(仅IP)只开一个就好
 #!icon=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/App_Store.png
 #!desc=更新日期 2025-09-05
 

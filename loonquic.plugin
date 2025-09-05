@@ -1,6 +1,6 @@
 #!name=Quic规则和屏蔽443端口
 #!icon=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/App_Store.png
-#!desc = 请注意QUIC(IP+域名和QUIC(仅IP)只开一个就好,建议严格拦截
+#!desc = 请注意QUIC(IP+域名)和QUIC(仅IP)只开一个就好,建议严格拦截
 #!date = 2025-09-05
 
 [Argument]
@@ -11,17 +11,17 @@ EnableUDP443 = select,"开","关",tag=屏蔽UDP 443,desc=选择是否启用
 
 
 [Rule]
-# 1. 严格拦截非国内 QUIC
+# 1. 严格拦截非国内 QUIC 境外或非.cn 的 QUIC 全拒，精确但更耗时间。
 $if($argument("EnableQUIC1") == "1")
 AND,((PROTOCOL,QUIC),(NOT,((OR,((GEOIP,CN),(DOMAIN-SUFFIX,cn)))))),REJECT
 $endif
 
-# 2. 简单拦截非国内 QUIC
+# 2. 简单拦截非国内 QUIC 按IP识别境外QUIC 全拒，快但可能误杀。
 $if($argument("EnableQUIC2") == "1")
 AND,((NOT,((GEOIP,CN))),(PROTOCOL,QUIC)),REJECT
 $endif
 
-# 3. 屏蔽 UDP 443
+# 3. 屏蔽 UDP 443 禁HTTP/3，强制回落TCP，稳但影响新特性。
 $if($argument("EnableUDP443") == "1")
 AND,((PROTOCOL,UDP),(DEST-PORT,443)),REJECT-NO-DROP
 $endif

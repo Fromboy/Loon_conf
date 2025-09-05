@@ -1,0 +1,24 @@
+#!name=Quic规则和屏蔽443端口
+#!icon=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/App_Store.png
+#!desc=更新日期 2025-09-05
+
+[Argument]
+EnableQUIC1 = select,"1","0",tag=严格拦截非国内QUIC(IP+域名),desc=选择是否启用
+EnableQUIC2 = select,"1","0",tag=简单拦截非国内QUIC(仅IP),desc=选择是否启用
+EnableUDP443 = select,"1","0",tag=屏蔽UDP 443,desc=选择是否启用
+
+[Rule]
+# 1. 严格拦截非国内 QUIC
+$if($argument("EnableQUIC1") == "1")
+AND,((PROTOCOL,QUIC),(NOT,((OR,((GEOIP,CN),(DOMAIN-SUFFIX,cn)))))),REJECT
+$endif
+
+# 2. 简单拦截非国内 QUIC
+$if($argument("EnableQUIC2") == "1")
+AND,((NOT,((GEOIP,CN))),(PROTOCOL,QUIC)),REJECT
+$endif
+
+# 3. 屏蔽 UDP 443
+$if($argument("EnableUDP443") == "1")
+AND,((PROTOCOL,UDP),(DEST-PORT,443)),REJECT-NO-DROP
+$endif

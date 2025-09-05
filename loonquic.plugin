@@ -1,12 +1,6 @@
 #!name=QUIC国内外规则和屏蔽443端口
 #!icon=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/App_Store.png
-#!desc = 请注意QUIC(IP+域名)和QUIC(仅IP)只开一个就好,建议宽松拦截
-⚠️1. 只允许国内 `.cn` 和大陆 IP 用 QUIC，其它 QUIC 全拦。
-⚠️2. 按 IP 判断，境外 QUIC 全拦。
-⚠️3. 禁止 UDP 443，用 TCP 代替 HTTP/3。强制回落TCP，稳但影响新特性。
-⏰规则过严：第1条要求同时满足“大陆IP和.cn 域名”，但很多国内网站虽然是大陆IP，结果被错杀
-⏰强制回落TCP，自然变慢。拦截HTTP/3：第3条禁了 UDP 443，HTTP/3 连接无法使用，国内很多大站（百度、腾讯、字节）本来用HTTP/3更快，现在只能走HTTP/2或HTTP/1.1，延迟上升。
-⏰规则优先级高：这类 REJECT 规则在前面，会覆盖后面的直连/代理规则，导致国内流量也被阻断或降级。
+#!desc = 请注意QUIC(IP+域名)和QUIC(仅IP)只开一个就好,建议宽松拦截       ⚠️1. 只允许国内 `.cn` 和大陆 IP 用 QUIC，其它 QUIC 全拦。      ⚠️2. 按 IP 判断，境外 QUIC 全拦。      ⚠️3. 禁止 UDP 443，用 TCP 代替 HTTP/3。强制回落TCP，稳但影响新特性。      ⏰规则过严：第1条要求同时满足“大陆IP和.cn 域名”，但很多国内网站虽然是大陆IP，结果被错杀      ⏰强制回落TCP，自然变慢。拦截HTTP/3：第3条禁了 UDP 443，HTTP/3 连接无法使用，国内很多大站（百度、腾讯、字节）本来用HTTP/3更快，现在只能走HTTP/2或HTTP/1.1，延迟上升。    ⏰规则优先级高：这类 REJECT 规则在前面，会覆盖后面的直连/代理规则，导致国内流量也被阻断或降级。
 #!date = 2025-09-05
 
 [Argument]

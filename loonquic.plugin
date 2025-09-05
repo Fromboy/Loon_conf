@@ -3,9 +3,9 @@
 #!desc=更新日期 2025-09-05
 
 [Argument]
-EnableQUIC1 = select,"1","0",tag=严格拦截非国内QUIC(IP+域名),desc=选择是否启用
-EnableQUIC2 = select,"1","0",tag=简单拦截非国内QUIC(仅IP),desc=选择是否启用
-EnableUDP443 = select,"1","0",tag=屏蔽UDP 443,desc=选择是否启用
+EnableQUIC1 = select,"开","关",tag=严格拦截非国内QUIC(IP+域名),desc=选择是否启用
+EnableQUIC2 = select,"开","关",tag=简单拦截非国内QUIC(仅IP),desc=选择是否启用
+EnableUDP443 = select,"开","关",tag=屏蔽UDP 443,desc=选择是否启用
 
 [Rule]
 # 1. 严格拦截非国内 QUIC

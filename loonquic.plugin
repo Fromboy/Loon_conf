@@ -1,6 +1,9 @@
 #!name=Quic规则和屏蔽443端口
 #!icon=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/App_Store.png
-#!desc = 请注意QUIC(IP+域名)和QUIC(仅IP)只开一个就好,建议严格拦截(1. 只允许国内 `.cn` 和大陆 IP 用 QUIC，其它 QUIC 全拦。2. 按 IP 判断，境外 QUIC 全拦。3. 禁止 UDP 443，用 TCP 代替 HTTP/3。强制回落TCP，稳但影响新特性。)
+#!desc = (请注意QUIC(IP+域名)和QUIC(仅IP)只开一个就好,建议严格拦截
+1. 只允许国内 `.cn` 和大陆 IP 用 QUIC，其它 QUIC 全拦。
+2. 按 IP 判断，境外 QUIC 全拦。
+3. 禁止 UDP 443，用 TCP 代替 HTTP/3。强制回落TCP，稳但影响新特性。)
 #!date = 2025-09-05
 
 [Argument]
